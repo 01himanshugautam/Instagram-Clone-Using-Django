@@ -5,6 +5,32 @@
 }
 
 body {
-    background-color: black;
-    color: white;
+    /* background-color: black; */
+    color: black;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .img {
+    height: 50px;
+}
+
+.nav .nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .nav-item .search {
+    /* height: 50px;
+    width: 50px; */
+}
+
+.nav .nav-item .nav-items .icon {
+    height: 50px;
+    width: 50px;
 }
