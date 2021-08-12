@@ -5,15 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-    {% load static %}
+    <title>SignUp ◽ Instagram</title>
 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
-    <script src="{% static 'js/index.js' %}"></script>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+
 </head>
 
 <body>
-    <h1>Login</h1>
+    
+    <div class="container">
+        
+    <form action="">
+        <h1 style="text-align: center">𝓘𝓷𝓼𝓽𝓪𝓰𝓻𝓪𝓶</h1>
+        <input type="email/phone" placeholder="Phone number, username or email"><br>
+        <input type="password" placeholder="Password"><br>
+        <button>Log in</button>
+
+    </form><br>
+
+    OR
+
+    <div class="col">
+        <a href="" class="fb btn">
+            <i class="fa fa-facebook fa-fw"></i>
+            <img src="" alt="">
+            Log in with facebook
+        </a>
+    </div>
+
+    </div>
+
 </body>
 
 </html>
