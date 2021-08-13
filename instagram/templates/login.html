@@ -2,37 +2,159 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp ◽ Instagram</title>
+    <title>Log in ▫ Instagram</title>
 
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
 
 </head>
 
 <body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="top">
+                <div class="logo">
+                    <img src="{% static 'images/instagram.png' %}" alt="Instagram" width="175px">
+                </div>
+                <div class="form">
+                    <div class="input_field">
+                        <input class="input" type="text" placeholder="Phone number, username or email">
+                    </div>
+                    <div class="input_field">
+                        <input class="input" type="password" placeholder="Password">
+                    </div>
+                    <div class="btn">
+                        <a href="">Log In</a>
+                    </div>
+                </div>
+                <div class="or">
+                    <div class="line"></div>
+                    <p>OR</p>
+                    <div class="line"></div>
+                </div>
+                <div class="diff">
+                    <div class="fb">
+                        <img src="{% static 'images/facebook.png' %}" alt="Facebook" height="18" width="18">
+                        <p>Log in with facebook</p>
+                    </div>
+                    <div class="forgot">
+                        <a href="">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="signup">
+                <p>Don't have an account? <a href="/signUp">Sign up</a></p>
+            </div>
+            <div class="apps">
+                <p>Get the app.</p>
+                <div class="icons">
+                    <a href="">
+                        <img src="{% static 'images/app_store.png' %}" alt="appstore">
+                    </a>
+                    <a href="">
+                        <img src="{% static 'images/google_play.png' %}" alt="playstore">
+                    </a>
+                </div>
+            </div>
 
-    <div class="container">
-
-        <form action="">
-            <h1 style="text-align: center">𝓘𝓷𝓼𝓽𝓪𝓰𝓻𝓪𝓶</h1>
-            <input type="email/phone" placeholder="Phone number, username or email"><br>
-            <input type="password" placeholder="Password"><br>
-            <button>Log in</button>
-
-        </form><br> OR
-
-        <div class="col">
-            <a href="" class="fb btn">
-                <i class="fa fa-facebook fa-fw"></i>
-                <img src="" alt=""> Log in with facebook
-            </a>
         </div>
+        <div class="footer">
+            <div align="center" class="row">
+                <div align="center" class="links">
+                    <ul>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Jobs</a></li>
+                        <li><a href="">Help</a></li>
+                        <li><a href="">API</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Terms</a></li>
+                        <li><a href="">Top Accounts</a></li>
+                        <li><a href="">Hashtags</a></li>
+                        <li><a href="">Locations</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Beauty</a></li>
+                        <li><a href="">Dance</a></li>
+                        <li><a href="">Fitness</a></li>
+                        <li><a href="">Food & Drink</a></li>
+                        <li><a href="">Home & Garden</a></li>
+                        <li><a href="">Music</a></li>
+                        <li><a href="">Visual Arts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="languages">
+                    <select name="languages" id="languages">
+                            
+                            <option value="afrikaans">Afrikaans</option>
+                            <option value=""></option>
+                            <option value="dansk">Dansk</option>
+                            <option value="deutsch">Deutsch</option>
+                            <option value=""></option>
+                            <option value="english" selected>English</option>
+                            <option value="english(uk)">English(UK)</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value="suomi">Suomi</option>
+                            <option value=""></option>
+                            <option value="bahasa indonesia">Bahasa Indonesia</option>
+                            <option value="italiano">Italiano</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+        
+                        </select>
+                </div>
+                <div class="copyright">
+                    <p>
+                        © 2021 Instagram from Facebook
+                    </p>
+                </div>
+            </div>
 
+
+        </div>
     </div>
-
 </body>
 
 </html>
