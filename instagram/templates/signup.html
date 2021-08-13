@@ -37,7 +37,7 @@
                     <p>OR</p>
                     <div class="line"></div>
                 </div>
-                <form action="/" method="post">{% csrf_token %}
+                <form method="post" action="/signup/">{% csrf_token %}
                     <div class="form">
                         <div class="input_field">
                             <input autocomplete="false" class="input" name="email" type="text" placeholder="Mobile number or email">
@@ -54,7 +54,6 @@
 
                         <button type="submit" class="signup-btn">Sign up</button>
                         <!-- <a href="" type="submit">Sign up</a> -->
-
                     </div>
                 </form>
                 <div class="terms">
@@ -68,7 +67,7 @@
             </div>
 
             <div class="signin">
-                <p>Have an account? <a href="/signUp">Log in</a></p>
+                <p>Have an account? <a href="/login">Log in</a></p>
             </div>
 
             <div class="apps">

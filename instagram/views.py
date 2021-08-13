@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import User
 
 # Create your views here.
 
@@ -12,11 +13,14 @@ def login(request):
 
 
 def signup(request):
-    # if request.method == "POST":
-    #     email = request.POST.get('email',)
-    #     name = request.POST.get('name', '')
-    #     username = request.POST.get('username', '')
-    #     password = request.POST.get('password', '')
-    # print(f"Email: {email}Name: {name}Username: {username}Password: {password}")
+    if request.method == "POST":
+        email = request.POST['email']
+        name = request.POST['name']
+        username = request.POST['username']
+        password = request.POST['password']
+        user = User(name=name, email=email,
+                    username=username, password=password)
+        user.save()
+        print("User Save in Database. User: {user}")
 
     return render(request, 'signup.html')
