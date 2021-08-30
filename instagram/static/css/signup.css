@@ -45,6 +45,14 @@ body {
     margin-bottom: 5px;
 }
 
+.error {
+    border: 1px solid #ff0000!important;
+}
+
+.error:focus {
+    border: 1px solid #ff0000!important;
+}
+
 .wrapper .header .top .form .input_field .input {
     width: 100%;
     background: #fafafa;

@@ -2,35 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagram</title>
-
-
     {% load static %}
-
-    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
     <script src="{% static 'js/index.js' %}"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="../static/css/home.css"> -->
-
 </head>
 
 <body>
     <nav class="nav">
         <div class="nav-item">
-            <!-- <img class="img" src="{% static 'images/Instagram.png' %}"> -->
-            <img class="img" src="{% static 'images/instagram.png">
+            <img class="img" src="{% static 'images/Instagram.png' %}" />
         </div>
         <div class="nav-item">
-            <input class="search" type="text" placeholer="Search">
+            <input class="search" type="text" placeholer="Search" />
         </div>
         <div class="nav-item">
-            <div class="nav-items"><img class="icon" src="{% static 'images/home.png' %}"></div>
-            <div class="nav-items"><img class="icon" src="{% static 'images/messenger.png' %}"></div>
-            <div class="nav-items"><img class="icon" src="{% static 'images/compass.png' %}"></div>
-            <div class="nav-items"><img class="icon" src="{% static 'images/heart.png' %}"></div>
-            <div class="nav-items"><img class="icon" src="{% static 'images/user.png' %}"></div>
+            <div class="nav-items">
+                <img class="icon" src="{% static 'images/home.png' %}" />
+            </div>
+            <div class="nav-items">
+                <img class="icon" src="{% static 'images/messenger.png' %}" />
+            </div>
+            <div class="nav-items">
+                <img class="icon" src="{% static 'images/compass.png' %}" />
+            </div>
+            <div class="nav-items">
+                <img class="icon" src="{% static 'images/heart.png' %}" />
+            </div>
+            {% if user.is_authenticated %} <a href="/logout">{{request.user}} </a>{% else %}
+            <div class="nav-items">
+                <img class="icon" src="{% static 'images/user.png' %}" />
+            </div>
+            {% endif%}
         </div>
     </nav>
     <!-- <h1>Homepage</h1> -->

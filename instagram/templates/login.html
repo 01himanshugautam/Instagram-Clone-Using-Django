@@ -2,15 +2,12 @@
 <html lang="en">
 
 <head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log in ▫ Instagram</title>
-
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}" />
 </head>
 
 <body>
@@ -18,19 +15,22 @@
         <div class="header">
             <div class="top">
                 <div class="logo">
-                    <img src="{% static 'images/instagram.png' %}" alt="Instagram" width="175px">
+                    <img src="{% static 'images/instagram.png' %}" alt="Instagram" width="175px" />
                 </div>
-                <div class="form">
-                    <div class="input_field">
-                        <input class="input" type="text" placeholder="Phone number, username or email">
+                <form action="/" method="post" autocomplete="off"> {% csrf_token %}
+
+                    <div class="form">
+                        <div class="input_field">
+                            <input required class="input" type="text" name="loginemail" placeholder="Phone number, username or email" autocomplete="off" />
+                        </div>
+                        <div class="input_field">
+                            <input required class="input" type="password" name="loginpassword" placeholder="Password" autocomplete="off" />
+                        </div>
+                        <button type="submit" onclick="validate()" class="signup-btn">
+                Log In
+              </button>
                     </div>
-                    <div class="input_field">
-                        <input class="input" type="password" placeholder="Password">
-                    </div>
-                    <div class="btn">
-                        <a href="">Log In</a>
-                    </div>
-                </div>
+                </form>
                 <div class="or">
                     <div class="line"></div>
                     <p>OR</p>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="diff">
                     <div class="fb">
-                        <img src="{% static 'images/facebook.png' %}" alt="Facebook" height="18" width="18">
+                        <img src="{% static 'images/facebook.png' %}" alt="Facebook" height="18" width="18" />
                         <p>Log in with facebook</p>
                     </div>
                     <div class="forgot">
@@ -53,14 +53,13 @@
                 <p>Get the app.</p>
                 <div class="icons">
                     <a href="">
-                        <img src="{% static 'images/app_store.png' %}" alt="appstore">
+                        <img src="{% static 'images/app_store.png' %}" alt="appstore" />
                     </a>
                     <a href="">
-                        <img src="{% static 'images/google_play.png' %}" alt="playstore">
+                        <img src="{% static 'images/google_play.png' %}" alt="playstore" />
                     </a>
                 </div>
             </div>
-
         </div>
         <div class="footer">
             <div align="center" class="row">
@@ -91,68 +90,62 @@
             <div class="column">
                 <div class="languages">
                     <select name="languages" id="languages">
-                            
-                            <option value="afrikaans">Afrikaans</option>
-                            <option value=""></option>
-                            <option value="dansk">Dansk</option>
-                            <option value="deutsch">Deutsch</option>
-                            <option value=""></option>
-                            <option value="english" selected>English</option>
-                            <option value="english(uk)">English(UK)</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value="suomi">Suomi</option>
-                            <option value=""></option>
-                            <option value="bahasa indonesia">Bahasa Indonesia</option>
-                            <option value="italiano">Italiano</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-        
-                        </select>
+              <option value="afrikaans">Afrikaans</option>
+              <option value=""></option>
+              <option value="dansk">Dansk</option>
+              <option value="deutsch">Deutsch</option>
+              <option value=""></option>
+              <option value="english" selected>English</option>
+              <option value="english(uk)">English(UK)</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value="suomi">Suomi</option>
+              <option value=""></option>
+              <option value="bahasa indonesia">Bahasa Indonesia</option>
+              <option value="italiano">Italiano</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
                 </div>
                 <div class="copyright">
-                    <p>
-                        © 2021 Instagram from Facebook
-                    </p>
+                    <p>© 2021 Instagram from Facebook</p>
                 </div>
             </div>
-
-
         </div>
     </div>
 </body>

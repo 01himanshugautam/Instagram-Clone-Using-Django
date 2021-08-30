@@ -9,6 +9,7 @@
 
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+    <script src="{% static 'js/validate.js' %}"></script>
 
 </head>
 
@@ -37,23 +38,23 @@
                     <p>OR</p>
                     <div class="line"></div>
                 </div>
-                <form method="post" action="/signup/">{% csrf_token %}
+                <form method="post" action="/signup/" autocomplete="off">{% csrf_token %}
                     <div class="form">
                         <div class="input_field">
-                            <input autocomplete="false" class="input" name="email" type="text" placeholder="Mobile number or email">
+                            <input required class="input" oninput="email()" id="email" name="email" type="text" placeholder="Mobile number or email" autocomplete="off">
                         </div>
                         <div class="input_field">
-                            <input autocomplete="false" class="input" name="name" type="text" placeholder="Full Name">
+                            <input required class="input" id="name" name="name" type="text" placeholder="Full Name" autocomplete="off">
                         </div>
                         <div class="input_field">
-                            <input autocomplete="false" class="input" name="username" type="text" placeholder="Username">
+                            <input required class="input" id="username" name="username" type="text" placeholder="Username" autocomplete="false">
                         </div>
                         <div class="input_field">
-                            <input autocomplete="false" class="input" name="password" type="password" placeholder="Password">
+                            <input required class="input" id="password" name="password" type="password" placeholder="Password" autocomplete="false">
                         </div>
 
                         <button type="submit" class="signup-btn">Sign up</button>
-                        <!-- <a href="" type="submit">Sign up</a> -->
+
                     </div>
                 </form>
                 <div class="terms">

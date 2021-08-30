@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -30,17 +29,16 @@ body {
     padding: 40px 40px 20px;
 }
 
-.wrapper .header .top .logo img{
+.wrapper .header .top .logo img {
     display: flex;
     margin: 0 auto 35px;
 }
 
-
-.wrapper .header .top .form  .input_field {
+.wrapper .header .top .form .input_field {
     margin-bottom: 5px;
 }
 
-.wrapper .header .top .form  .input_field .input {
+.wrapper .header .top .form .input_field .input {
     width: 100%;
     background: #fafafa;
     border: 1px solid #efefef;
@@ -50,7 +48,7 @@ body {
     padding: 10px;
 }
 
-.wrapper .header .top .form  .input_field .input:focus {
+.wrapper .header .top .form .input_field .input:focus {
     border: 1px solid #b2b2b2;
 }
 
@@ -63,7 +61,17 @@ body {
     padding: 5px;
 }
 
-.wrapper .header .top .form .btn a{
+.signup-btn {
+    color: #ffffff;
+    background-color: #3897f0;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    width: 265px;
+    border-radius: 3px;
+}
+
+.wrapper .header .top .form .btn a {
     color: #fff;
     display: block;
 }
@@ -82,7 +90,7 @@ body {
     background: #efefef;
 }
 
-.wrapper .header .or p{
+.wrapper .header .or p {
     color: #999;
     font-size: 12px
 }
@@ -141,7 +149,7 @@ body {
 }
 
 .wrapper .footer .row,
-.wrapper .footer  .column {
+.wrapper .footer .column {
     max-width: 935px;
     width: 100%;
     margin: 0 auto;
@@ -155,7 +163,7 @@ body {
     margin-right: 10px;
 }
 
-.wrapper .footer .links ul li a{
+.wrapper .footer .links ul li a {
     font-size: 12px;
     color: #999;
 }

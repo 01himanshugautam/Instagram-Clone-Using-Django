@@ -42,4 +42,5 @@ body {
     margin: 0 5px 0 5px;
     height: 25px;
     width: 25px;
+    cursor: pointer;
 }
